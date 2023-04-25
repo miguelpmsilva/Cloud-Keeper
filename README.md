@@ -5,9 +5,11 @@ O Cloud Keeper é um modelo conceptual de uma campainha inteligente usando tecno
 Este projeto utiliza o Microsoft Azure, o Telegram e um Raspberry Pi como componentes principais.
 
 
-<img src="Diagrama.jpg" width=70% height=70%>
+<img src="Diagrama.jpg" width=70% height=70%> 
 
+<img align="right" src="Telegram_Options.jpg" width=20% height=20%>
 Com base na arquitetura apresentada, o fluxo do projeto é de simples compreensão:
+
 1) Quando um utilizador pressiona a campainha, é transmitida a instrução para o Raspberry Pi
 gravar um vídeo com duração de 10 segundos através do módulo de câmara, de modo a saber 
 quem pressionou a campainha. 
@@ -15,7 +17,7 @@ quem pressionou a campainha.
 3) O URL é enviado para a conversa do Telegram através de um bot, e é apresentado ao utilizador 
 o vídeo de quem pressionou a campainha, juntamente com a hora a que foi pressionada e opções 
 para destrancar a porta ou ignorar. 
-<img src="Telegram_Options.jpg" width=30% height=30%>
+
 4) Após o utilizador responder com uma das opções, a resposta é registada e interpretada pelo bot. Se 
 a resposta for a instrução para destrancar a porta, é transmitida para o Raspberry Pi e 
 sequencialmente para o servomotor, que irá destrancar a porta.
