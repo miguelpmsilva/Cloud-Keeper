@@ -7,12 +7,13 @@ Este projeto utiliza o Microsoft Azure, o Telegram e um Raspberry Pi como compon
 
 <img src="Diagrama.jpg" width=70% height=70%> 
 
-<img align="right" src="Telegram_Options.jpg" width=20% height=20%>
-Com base na arquitetura apresentada, o fluxo do projeto é de simples compreensão:
 
+Com base na arquitetura apresentada, o fluxo do projeto é de simples compreensão:
+<img align="right" src="Telegram_Options.jpg" width=25% height=30%>
 1) Quando um utilizador pressiona a campainha, é transmitida a instrução para o Raspberry Pi
 gravar um vídeo com duração de 10 segundos através do módulo de câmara, de modo a saber 
 quem pressionou a campainha. 
+
 2) Depois de gravar o vídeo, o Raspberry Pi envia-o para a conta de armazenamento do Azure (através de shared access signatures). De seguida é obtida outra shared access signature para partilhar o vídeo diretamente da conta de armazenamento do Azure, através de um URL.
 3) O URL é enviado para a conversa do Telegram através de um bot, e é apresentado ao utilizador 
 o vídeo de quem pressionou a campainha, juntamente com a hora a que foi pressionada e opções 
